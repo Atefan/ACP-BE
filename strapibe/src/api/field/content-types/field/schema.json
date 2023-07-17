@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fields",
+  "info": {
+    "singularName": "field",
+    "pluralName": "fields",
+    "displayName": "Field",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Action",
+        "Responsibility",
+        "Communication skills",
+        "Business impact and value",
+        "Mastery"
+      ],
+      "required": true
+    },
+    "Grade": {
+      "type": "float",
+      "required": true,
+      "min": 0
+    },
+    "diagram_ids": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::diagram.diagram",
+      "mappedBy": "fields_ids"
+    }
+  }
+}

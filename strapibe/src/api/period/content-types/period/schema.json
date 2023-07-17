@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "periods",
+  "info": {
+    "singularName": "period",
+    "pluralName": "periods",
+    "displayName": "Period"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Start": {
+      "type": "date"
+    },
+    "End": {
+      "type": "date"
+    }
+  }
+}

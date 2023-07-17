@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "diagrams",
+  "info": {
+    "singularName": "diagram",
+    "pluralName": "diagrams",
+    "displayName": "Diagram",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Date": {
+      "type": "date",
+      "required": true
+    },
+    "users_permissions_user_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "diagrams_id"
+    },
+    "fields_ids": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::field.field",
+      "inversedBy": "diagram_ids"
+    },
+    "rating_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::rating.rating",
+      "inversedBy": "diagrams_id"
+    }
+  }
+}
